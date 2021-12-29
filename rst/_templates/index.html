@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% set title = _('Overview') %}
+{% block body %}
+  <h1>{{ _('Welcome') }}</h1>
+
+  <div class="quotebar">
+    <p><em>{%trans%}Orville Wright:{%endtrans%}</em></p>
+    <p>{%trans%}&#8220;The exhilaration of flying is too keen, the pleasure too great, for it to be neglected as a sport.&#8220;{%endtrans%}</p>
+  </div>
+  <img src="_static/lpp.gif" alt="LPP example' width=300" />
+  <p>{%trans%}This site presents the design of a model airplane suitable for competition in the indoor rubber-powered "Limited Pennyplane" class. The model needs to weigh at least as much as a single U.S Penny! That is very light, and models of this type are flown in gymnasiums and small auditoriums where they can achieve times of around 5-10 minutes, depending on the skills of the builder and flyer.
+    {%endtrans%}</p>
+<p>{%trans%}Click on the "Contents" link below to get started.{%endtrans%}</p>
+
+  <h2 style="margin-bottom: 0">{%trans%}Documentation{%endtrans%}</h2>
+
+  <table class="contentstable">
+   <tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="{{ pathto("contents") }}">{%trans%}Contents{%endtrans%}</a><br/>
+           <span class="linkdescr">{%trans%}for a complete overview{%endtrans%}</span></p>
+      </td><td>
+        {%- if hasdoc('genindex') %}<p class="biglink"><a class="biglink" href="{{ pathto("genindex") }}">{%trans%}General Index{%endtrans%}</a><br/>
+           <span class="linkdescr">{%trans%}all functions, classes, terms{%endtrans%}</span></p>{%- endif %}
+      </td>
+    </tr><tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="{{ pathto("changes") }}">{%trans%}Changes{%endtrans%}</a><br/>
+           <span class="linkdescr">{%trans%}release history{%endtrans%}</span></p>
+      </td><td>
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}

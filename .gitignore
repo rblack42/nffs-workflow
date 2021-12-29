@@ -1,0 +1,27 @@
+# Mac
+.DS_Store
+
+# Vim
+*~
+*.sw*
+
+# Python
+.direnv
+__pycache__
+*.py[cod]
+.ipynb_checkpoints
+
+# Sphinx
+_build
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pytxcode
+*.synctex.gz
+pythontex*

@@ -1,0 +1,20 @@
+import sympy
+import sympytex
+sympytex.openout('main')
+sympytex.blockbegin()
+try:
+   x = sympy.Symbol('x')
+   h = sympy.integrate(1+x**4,x)
+except:
+ sympytex.goboom(99)
+sympytex.blockend()
+try:
+ sympytex.initplot('main')
+ sympytex.plot(0, plot(sin(x), x, 0, 2*pi, show=False), format='notprovided', epsmagick=False)
+except:
+ sympytex.goboom(101)
+try:
+ sympytex.inline(0, h)
+except:
+ sympytex.goboom(104)
+sympytex.endofdoc()
